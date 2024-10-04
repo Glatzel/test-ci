@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo "Test"
-    - run: exit 1
+    - run: exit 0
       id: bad
       continue-on-error: true
     - run: echo "OK"
