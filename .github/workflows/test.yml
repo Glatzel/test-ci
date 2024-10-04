@@ -2,10 +2,7 @@ on:
     workflow_dispatch:
 jobs:
   example:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-    - run: echo "Test"
-    - run: exit 1
-      id: bad
-    - run: echo "OK"
-      if: job.steps.bad.status == failure() && (success() || failure())
+    - run: write-output "测试"
+
