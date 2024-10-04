@@ -7,6 +7,5 @@ jobs:
     - run: echo "Test"
     - run: exit 1
       id: bad
-      continue-on-error: true
     - run: echo "OK"
       if: job.steps.bad.status == failure()
