@@ -1,0 +1,12 @@
+on:
+    workflow_dispatch:
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Test"
+    - run: exit 1
+      id: bad
+      continue-on-error: true
+    - run: echo "OK"
+      if: job.steps.bad.status == failure()
