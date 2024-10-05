@@ -4,8 +4,8 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
-    - run: echo "Test"
-    - run: exit 0
-      id: bad
-    - run: echo "OK"
-      if: job.steps.bad.status == failure() && (failure()||success())
+      - uses: actions/checkout@v4
+      - name: Set up pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          run-install: false
