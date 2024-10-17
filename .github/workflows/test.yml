@@ -6,6 +6,7 @@ jobs:
     steps:
       - run: echo "VARI=true" >> "$env:GITHUB_ENV"
   example1:
+    needs: example
     runs-on: windows-latest
     steps:
       - run: Write-Output "$env:VARI"
