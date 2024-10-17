@@ -2,7 +2,7 @@ on:
     workflow_dispatch:
 jobs:
   example:
-    runs-on: [self-hosted]
+    runs-on: windows-latest
     steps:
       - run: echo "VARI=true" >> "$env:GITHUB_ENV"
   example1:
