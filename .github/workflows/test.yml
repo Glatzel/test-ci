@@ -1,12 +1,15 @@
+name: test
 on:
     workflow_dispatch:
+env:
+    TAG: ""
 jobs:
   example:
     runs-on: windows-latest
     steps:
-      - run: echo "VARI=true" >> "$env:GITHUB_ENV"
+      - run: echo "TAG=123.45.6" >> "$env:GITHUB_ENV"
   example1:
     needs: example
     runs-on: windows-latest
     steps:
-      - run: Write-Output "$env:VARI"
+      - run: Write-Output "$env:TAG"
