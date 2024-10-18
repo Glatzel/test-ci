@@ -8,6 +8,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: echo "TAG=123.45.6" >> "$env:GITHUB_ENV"
+      - run: Write-Output "$env:TAG"
+
   example1:
     needs: example
     runs-on: windows-latest
