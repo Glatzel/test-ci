@@ -7,4 +7,4 @@ jobs:
   example:
     runs-on: windows-latest
     steps:
-      - run: Write-Output "::notice test notice"
+      - run: Write-Output "::notice title={title}::{message} test notice"
