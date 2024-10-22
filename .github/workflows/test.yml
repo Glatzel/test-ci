@@ -7,5 +7,4 @@ jobs:
   example:
     runs-on: windows-latest
     steps:
-      - run: |
-          Write-Output "::error title=Ruff (I001),file=D:\project\py-glatzel\src\glatzel\audio\spek.py,line=1,col=1,endLine=12,endColumn=1::src\glatzel\audio\spek.py:1:1: I001 Import block is un-sorted or un-formatted"
+      - run: Write-Output "::notice test notice"
