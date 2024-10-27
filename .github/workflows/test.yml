@@ -32,7 +32,7 @@ jobs:
       name: test
       machine: windows-latest
       test_path: ./src
-      cov: true
+      cov: true 
       codecov: true
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
