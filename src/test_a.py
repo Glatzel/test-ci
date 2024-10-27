@@ -5,11 +5,11 @@ def foo(x):
 def bar(x):
     return x + 1
 
-def bar1(x):
+def bar1( x):
     return x + 1
 
 
-def foobar(x):
+def foobar(x): 
     return x + 3
 
 
