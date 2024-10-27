@@ -28,10 +28,6 @@ permissions:
 jobs: 
   ruff:
     uses: Glatzel/py-template/.github/workflows/lint.yml@main
-    with:
-      codecov: true 
-    secrets: 
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
   pytest:
     uses: Glatzel/py-template/.github/workflows/pytest.yml@main
     with: 
