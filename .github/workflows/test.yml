@@ -33,5 +33,5 @@ jobs:
       machine: windows-latest
       test_path: ./src
       cov: true 
-    secrets:
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}   
+    secrets: 
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
