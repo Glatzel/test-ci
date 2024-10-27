@@ -3,3 +3,19 @@ coverage:
     project:
       default:
         target: 100%
+    patch:
+      default:
+        target: 100%
+comment:
+  behavior: new
+component_management:
+  default_rules:
+  individual_components:
+    - component_id: a
+      name: a
+      paths: 
+        - src/*a.py
+    - component_id: b
+      name: b
+      paths: 
+        - src/*b.py
