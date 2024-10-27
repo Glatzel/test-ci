@@ -1,0 +1,14 @@
+[project]
+authors = ["Glatzel <893016099@qq.com.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "test-ci"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python="*"
+pytest = "*"
+pytest-cov = "*"

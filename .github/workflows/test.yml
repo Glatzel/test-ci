@@ -1,10 +1,38 @@
-name: test
+name: CI
+
 on:
-    workflow_dispatch:
-env:
-    TAG: ""
+  push:
+    branches: main
+    paths-ignore:
+      - "scripts/*"
+      - "*.md"
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - ready_for_review
+    paths-ignore:
+      - "scripts/*"
+      - "*.md"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+  
+permissions:
+  contents: read
+  actions: read
+  checks: write
+
 jobs:
-  example:
-    runs-on: windows-latest
-    steps:
-      - run: Write-Output "::notice title={title}::test notice"
+  pytest-arithmetic:
+    uses: Glatzel/py-template/.github/workflows/pytest.yml@main
+    with: 
+      name: test
+      machine: windows-latest
+      test_path: ./src
+      cov: true
+      codecov: true
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
