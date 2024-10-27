@@ -25,14 +25,19 @@ permissions:
   actions: read
   checks: write
 
-jobs:
+jobs: 
+  ruff:
+    uses: Glatzel/py-template/.github/workflows/lint.yml@main
+    with:
+      codecov: true 
+    secrets: 
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
   pytest:
     uses: Glatzel/py-template/.github/workflows/pytest.yml@main
     with: 
       name: test
       machine: windows-latest
       test_path: ./src
-      cov: true 
-      codecov: true
-    secrets:
+      codecov: true 
+    secrets: 
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
