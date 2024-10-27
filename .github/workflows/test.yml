@@ -34,4 +34,4 @@ jobs:
       test_path: ./src
       cov: true 
     secrets:
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}  
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}   
