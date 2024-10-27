@@ -8,5 +8,5 @@ def foobar(x):
 
 def test_foo( ): 
     assert foo( 3  ) == 5
-def test_bar():
+def test_bar(): 
     assert foo(3) == 4
