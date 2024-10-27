@@ -12,6 +12,7 @@ component_management:
   default_rules:
     statuses:
       - type: project
+        target: 100%
   individual_components:
     - component_id: a
       name: a
