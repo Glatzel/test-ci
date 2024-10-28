@@ -1,3 +1,4 @@
+import pytest
 def foo(x):
     return x + 1
 
@@ -12,9 +13,9 @@ def bar1(x):
 def foobar(x):
     return x + 3
 
-
+@pytest.mark.benchmark
 def test_foo():
-    assert foo(3) == 5
+    assert foo(3) == 4
 
 def test_foo1():
     assert foo(3) == 5
