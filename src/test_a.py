@@ -21,7 +21,7 @@ def foobar(x):
 
 @pytest.mark.benchmark
 def test_foo():
-    time.sleep(10)
+    sum(1 for x in list(range(100000)) if x % 2 == 0)
     assert foo(3) == 4
 
 
