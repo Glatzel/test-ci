@@ -1,4 +1,5 @@
 import pytest
+import time
 def foo(x):
     return x + 1
 
@@ -15,6 +16,7 @@ def foobar(x):
 
 @pytest.mark.benchmark
 def test_foo():
+    time.sleep(1)
     assert foo(3) == 4
 
 def test_foo1():
