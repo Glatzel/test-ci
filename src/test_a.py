@@ -13,6 +13,8 @@ def bar(x):
 
 def bar1(x):
     return x + 1
+def bar2(x):
+    return x + 1
 
 
 def foobar(x):
