@@ -22,7 +22,7 @@ def foobar(x):
 @pytest.mark.benchmark
 def test_foo():
     time.sleep(10)
-    a = 10
+    b = 10
     assert foo(3) == 4
 
 
