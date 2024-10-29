@@ -19,20 +19,20 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-  
+
 permissions:
   contents: read
   actions: read
   checks: write
 
-jobs: 
+jobs:
   ruff:
     uses: Glatzel/py-template/.github/workflows/lint.yml@main
   pytest:
     uses: Glatzel/py-template/.github/workflows/pytest.yml@main
-    with: 
+    with:
       name: test
       machine: windows-latest
       test_path: ./src
-    secrets: 
+    secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

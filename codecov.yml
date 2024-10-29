@@ -16,9 +16,9 @@ component_management:
   individual_components:
     - component_id: a
       name: a
-      paths: 
+      paths:
         - src/*a.py
     - component_id: b
       name: b
-      paths: 
+      paths:
         - src/*b.py

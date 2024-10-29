@@ -3,8 +3,8 @@ import time
 import pytest
 
 
-def foo(x  ):
-    return x +  1
+def foo(x):
+    return x + 1
 
 
 def bar(x):
@@ -21,9 +21,9 @@ def foobar(x):
 
 @pytest.mark.benchmark
 def test_foo():
-    time.sleep(10 )
-    a=10
-    assert foo(3)== 4
+    time.sleep(10)
+    a = 10
+    assert foo(3) == 4
 
 
 def test_bar():
