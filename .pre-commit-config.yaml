@@ -15,8 +15,7 @@ repos:
     # Ruff version.
     rev: v0.7.1
     hooks:
-      # Run the linter.
       - id: ruff
-      args: [ --output-format=github ]
+        args: [ --output-format=github ]
       # Run the formatter.
       - id: ruff-format
