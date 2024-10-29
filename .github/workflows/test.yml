@@ -24,11 +24,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
   
-permissions:
-  contents: read
-  actions: read
-  checks: write
-
 jobs: 
   pytest:
     uses: Glatzel/py-template/.github/workflows/pytest.yml@main
