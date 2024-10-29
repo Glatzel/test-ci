@@ -15,6 +15,10 @@ on:
     paths-ignore:
       - "scripts/*"
       - "*.md"
+permissions:
+  contents: read
+  actions: read
+  checks: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
