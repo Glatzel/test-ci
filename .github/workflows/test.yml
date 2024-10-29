@@ -26,8 +26,6 @@ permissions:
   checks: write
 
 jobs: 
-  ruff:
-    uses: Glatzel/py-template/.github/workflows/lint.yml@main
   pytest:
     uses: Glatzel/py-template/.github/workflows/pytest.yml@main
     with: 
