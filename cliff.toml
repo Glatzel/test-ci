@@ -105,3 +105,5 @@ filter_commits = false
 topo_order = false
 # sort the commits inside sections by oldest/newest order
 sort_commits = "oldest"
+# A regular expression for matching the git tags.
+tag_pattern = "^v[0-9].*$"
