@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update pixi.toml
+- Fix
+- Update markdownlint.json (#13)
 
 ### Fixed
 - Sadf
