@@ -28,4 +28,4 @@ jobs:
       - name: release-body
         run: |
           pixi global install git-cliff
-          git-cliff --unreleased --tag v0.2.0-rc.1 --strip header
+          git-cliff --unreleased
