@@ -10,13 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add 132
 - Add doc
 
-### Changed
+### Chan  ged
 - New pattern
 - Update pixi.toml by @Glatzel
 - Fix
 - Update markdownlint.json by @Glatzel in [#13](https://github.com/Glatzel/test-ci/pull/13)
 - Update markdownlint.json by @Glatzel in [#14](https://github.com/Glatzel/test-ci/pull/14)
-- Update pixi.toml by @Glatzel in [#15](https://github.com/Glatzel/test-ci/pull/15)
+- Update pix             .toml by @Glatzel in [#15](https://github.com/Glatzel/test-ci/pull/15)
 
 ### Fixed
 - Abc
