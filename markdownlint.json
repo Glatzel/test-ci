@@ -1,7 +1,5 @@
 {
     "default": true,
     "MD013": false,
-    "line_length": false,
     "code_block_line_length": false
 }
-
