@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Update pixi.toml
 - Fix
-- Update markdownlint.json (#13)
+- Update markdownlint.json
+- Update markdownlint.json
 
 ### Fixed
 - Sadf
@@ -30,8 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Abc
 
-## New Contributors
-* @Glatzel made their first contribution
 [unreleased]: https://github.com/Glatzel/test-ci/compare/v0.2.0..HEAD
 [0.2.0]: https://github.com/Glatzel/test-ci/compare/v0.1.0..v0.2.0
 
