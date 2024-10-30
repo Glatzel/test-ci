@@ -1,0 +1,31 @@
+name: release
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  pull-requests: read
+  contents: write
+
+jobs:
+  add-tag:
+    runs-on: windows-latest
+    outputs:
+      tag: ${{ steps.main.outputs.tag }}
+      is_pre_release: ${{ steps.main.outputs.is_pre_release }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          run-install: false
+
+      - name: release-body
+        run: |
+          pixi global install git-cliff
+          git-cliff --unreleased --tag v0.2.0-rc.1 --strip header
