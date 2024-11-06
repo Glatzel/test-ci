@@ -45,3 +45,4 @@ jobs:
           path: '~\AppData\Local\rattler'
           key: pixi-win-64-
           restore-keys: pixi-${{ runner.os }}-
+      - run: pixi run pytest
