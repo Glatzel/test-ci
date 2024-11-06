@@ -43,6 +43,6 @@ jobs:
       - uses: actions/cache/restore@v4
         with:
           path: '~\AppData\Local\rattler'
-          key: pixi-win-64-
+          key: pixi-win-64-${{hashFiles('**/pixi.lock')}}
           restore-keys: pixi-win-64-
       - run: pixi run pytest
