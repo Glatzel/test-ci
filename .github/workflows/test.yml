@@ -32,9 +32,6 @@ jobs:
     uses: Glatzel/template/.github/workflows/cache-pixi.yml@main
     with:
       machine: windows-latest
-      envs: >-
-        default
-        a
   restore-cache:
     runs-on: windows-latest
     steps:
@@ -43,7 +40,12 @@ jobs:
       - uses: actions/cache/restore@v4
         with:
           path: '~\AppData\Local\rattler'
-          key: pixi-win-64-b11602018d03cc6f786cf244a15266887d8aafd5dbfe1fc366a53155f40a9cfc
+          key: pixi-${{ runner.os }}-${{ hashFiles('**/pixi.lock') }}
           restore-keys: |
-            pixi-win-64
+            pixi-${{ runner.os }}
+
+      - name: Set up pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          run-install: false
       - run: pixi run pytest
