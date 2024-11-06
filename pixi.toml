@@ -14,5 +14,6 @@ pytest = "*"
 
 [feature.a.dependencies]
 numpy="*"
+
 [environments]
-a=["numpy"]
+a=["a"]
