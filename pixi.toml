@@ -13,7 +13,7 @@ python="*"
 pytest = "*"
 
 [feature.a.dependencies] 
-numpy="1.24.*"
+numpy="1.26.*"
 
 [environments]
 a=["a"]
