@@ -28,7 +28,7 @@ permissions:
 
 jobs:
   cache-pixi:
-    # if: ${{github.event_name == 'workflow_dispatch'}}
+    if: ${{github.event_name == 'workflow_dispatch'}}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -37,9 +37,6 @@ jobs:
         uses: prefix-dev/setup-pixi@v0.8.1
         with:
           frozen: true
-          environments: >-
-            audio
-            arithmetic-cpu
           cache: false
           cache-write: true
 
