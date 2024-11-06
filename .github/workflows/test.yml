@@ -32,7 +32,6 @@ jobs:
     uses: Glatzel/template/.github/workflows/cache-pixi.yml@main
     with:
       machine: windows-latest
-      install_cmd: pixi install -e audio -e arithmetic-cpu
 
   restore-cache:
     runs-on: windows-latest
