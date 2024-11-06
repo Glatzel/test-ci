@@ -29,34 +29,18 @@ permissions:
 jobs:
   cache-pixi:
     if: ${{github.event_name == 'workflow_dispatch'}}
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-   
-      - name: Set up pixi
-        uses: prefix-dev/setup-pixi@v0.8.1
-        with:
-          frozen: true
-          cache: true
-          cache-write: true
+    uses: Glatzel/template/.github/workflows/cache-pixi.yml@main
+    with:
+      machine: windows-latest
+      install_cmd: pixi install -e audio -e arithmetic-cpu
 
-  pytest:
-    needs: cache-pixi
-    if: ${{always()}}
-    # uses: Glatzel/template/.github/workflows/pytest.yml@main
-    # with:
-    #   name: test
-    #   machine: windows-latest
-    #   test_path: ./src
-    # secrets:
-    #   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+  restore-cache:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-   
-      - name: Set up pixi
-        uses: prefix-dev/setup-pixi@v0.8.1
+      - name: Restore pixi cache
+        uses: actions/cache/restore@v4
         with:
-          frozen: true
-          cache: true
-          cache-write: false
+          path: path/to/dependencies
+          key: pixi-${{ runner.os }}-${{ hashFiles('**/pixi.lock') }}
+          restore-keys: pixi-${{ runner.os }}
