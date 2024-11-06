@@ -67,6 +67,7 @@ jobs:
           key: pixi-${{ runner.os }}-${{ hashFiles('**/pixi.lock') }}
           restore-keys: |
             pixi-${{ runner.os }}
+            pixi-win-64
 
       - name: Set up pixi
         uses: prefix-dev/setup-pixi@v0.8.1
