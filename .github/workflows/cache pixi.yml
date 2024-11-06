@@ -2,20 +2,6 @@ name: cache pixi
 
 on:
   workflow_dispatch:
-  push:
-    branches: main
-    paths-ignore:
-      - "scripts/*"
-      - "*.md"
-  pull_request:
-    types:
-      - opened
-      - edited
-      - synchronize
-      - ready_for_review
-    paths-ignore:
-      - "scripts/*"
-      - "*.md"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -28,7 +14,6 @@ permissions:
 
 jobs:
   cache:
-    if: ${{github.event_name=='workflow_dispatch'}}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
