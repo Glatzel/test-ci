@@ -38,6 +38,9 @@ jobs:
         with:
           cache: true
           cache-write: true
+          environments: >-
+            default
+            a
   restore-cache:
     runs-on: windows-latest
     steps:
