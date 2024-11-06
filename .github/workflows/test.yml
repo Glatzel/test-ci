@@ -36,10 +36,12 @@ jobs:
         default
         a
   restore-cache:
-    uses: Glatzel/template/.github/workflows/pytest.yml@main
-    with:
-      name: test
-      machine: windows-latest
-      pixi_python_env: default
-    secrets:
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache/restore@v4
+        with:
+          path: '~\AppData\Local\rattler'
+          key: pixi-${{ runner.os }}-
+          restore-keys: pixi-${{ runner.os }}-
