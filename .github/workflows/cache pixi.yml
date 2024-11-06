@@ -1,4 +1,4 @@
-name: cache action
+name: cache pixi
 
 on:
   workflow_dispatch:
