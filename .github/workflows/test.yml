@@ -42,7 +42,7 @@ jobs:
 
   pytest:
     needs: cache-pixi
-    # if: ${{success()||failure()||cancelled()}}
+    # if: always()
     # uses: Glatzel/template/.github/workflows/pytest.yml@main
     # with:
     #   name: test
