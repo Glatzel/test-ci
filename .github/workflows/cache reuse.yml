@@ -1,4 +1,4 @@
-name: cache action
+name: cache reuse
 
 on:
   workflow_dispatch:
