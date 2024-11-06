@@ -43,5 +43,5 @@ jobs:
       - uses: actions/cache/restore@v4
         with:
           path: '~\AppData\Local\rattler'
-          key: pixi-${{ runner.os }}-
+          key: pixi-win-64-
           restore-keys: pixi-${{ runner.os }}-
