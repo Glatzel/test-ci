@@ -11,3 +11,8 @@ version = "0.1.0"
 [dependencies]
 python="*"
 pytest = "*"
+
+[feature.a.dependencies]
+numpy="*"
+[environments]
+a=["numpy"]

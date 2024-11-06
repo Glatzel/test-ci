@@ -27,19 +27,12 @@ permissions:
   checks: write
 
 jobs:
-  cache-pixi:
-    if: ${{github.event_name ==  'workflow_dispatch'}}
-    uses: Glatzel/template/.github/workflows/cache-pixi.yml@main
-    with:
-      machine: windows-latest
-
   restore-cache:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Restore pixi cache
-        uses: actions/cache/restore@v4
+
+      - name: Set up pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
         with:
-          path: '~\AppData\Local\rattler'
-          key: pixi-${{ runner.os }}-${{ hashFiles('**/pixi.lock') }}
-          restore-keys: pixi-${{ runner.os }}
+          environments: default a
