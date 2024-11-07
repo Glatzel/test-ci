@@ -18,4 +18,5 @@ updates:
       all:
         patterns:
           - "*"
-    prefix: "build"
+    commit-message:
+      prefix: "build"
