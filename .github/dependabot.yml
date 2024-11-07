@@ -18,3 +18,4 @@ updates:
       all:
         patterns:
           - "*"
+    prefix: "build"
