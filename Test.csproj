@@ -19,20 +19,20 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<Using Include="Xunit" />
-		<PackageReference Include="xunit" Version="2.8" />
-		<PackageReference Include="xunit.runner.visualstudio" Version="2.8" />
+		<PackageReference Include="xunit" Version="2.9.2" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
 		<PackageReference Include="JunitXml.TestLogger" Version="4.1.0" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
-		<PackageReference Include="coverlet.collector" Version="6.0.0">
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+		<PackageReference Include="coverlet.collector" Version="6.0.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
 		  </PackageReference>
-		<PackageReference Include="NLog" Version="5.3.0" />
-		<PackageReference Include="CSharpier.MsBuild" Version="0.29.0">
+		<PackageReference Include="NLog" Version="5.3.4" />
+		<PackageReference Include="CSharpier.MsBuild" Version="0.29.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Roslynator.Analyzers" Version="4.0.0">
+		<PackageReference Include="Roslynator.Analyzers" Version="4.12.9">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
 		</PackageReference>
