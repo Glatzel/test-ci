@@ -2,6 +2,7 @@ name: test
 
 on:
   workflow_dispatch:
+  push:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -14,15 +15,21 @@ permissions:
 
 jobs:
   cache:
+    strategy:
+      matrix:
+        version: [1, 2, 3]
     if: ${{1==0}}
-    runs-on: windows-latest
+    runs-on: [self-hosted, windows]
     steps:
       - uses: actions/checkout@v4
 
   restore-cache:
+    strategy:
+      matrix:
+        version: [1, 2, 3]
     needs: cache
     if: ${{!cancelled()}}
-    runs-on: windows-latest
+    runs-on: [self-hosted, windows]
     steps:
       - uses: actions/checkout@v4
 
