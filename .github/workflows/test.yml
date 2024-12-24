@@ -18,30 +18,6 @@ jobs:
     strategy:
       matrix:
         version: [1, 2, 3]
-    if: ${{1==0}}
     runs-on: [self-hosted, windows]
     steps:
       - uses: actions/checkout@v4
-
-  restore-cache:
-    strategy:
-      matrix:
-        version: [1, 2, 3]
-    needs: cache
-    if: ${{!cancelled()}}
-    runs-on: [self-hosted, windows]
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/cache/restore@v4
-        with:
-          path: '~\AppData\Local\rattler'
-          key: pixi-${{ runner.os }}-${{ hashFiles('**/pixi.lock') }}
-          restore-keys: |
-            pixi-${{ runner.os }}
-
-      - name: Set up pixi
-        uses: prefix-dev/setup-pixi@v0.8.1
-        with:
-          run-install: false
-      - run: pixi run pytest
