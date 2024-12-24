@@ -20,4 +20,4 @@ jobs:
         version: [1, 2, 3]
     runs-on: [self-hosted, windows]
     steps:
-      - uses: actions/checkout@v4
+      - run: git clone https://github.com/Glatzel/test-ci.git
